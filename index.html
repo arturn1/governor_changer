@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./renderer.js"></script>
+  <script type="text/javascript" src="./custom.js"></script>
+  <title>Hello World!</title>
+</head>
+
+<body>
+
+  <div>
+    <h1 class="text-center jumbotron jumbotron-fluid">Governor Management</h1>
+  </div>
+  
+
+  <div class="container pt-2">
+    <div class="mb-3">
+      <label for="address">CPU0</label>
+      <input type="text" class="form-control" id="cpu0" required="">
+      <div class="invalid-feedback">
+
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="address">CPU1</label>
+      <input type="text" class="form-control" id="cpu1" required="">
+      <div class="invalid-feedback">
+
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="address">CPU2</label>
+      <input type="text" class="form-control" id="cpu2" required="">
+      <div class="invalid-feedback">
+
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="address">CPU3</label>
+      <input type="text" class="form-control" id="cpu3" required="">
+      <div class="invalid-feedback">
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container d-flex justify-content-around">
+    <div class="">
+      <button class="btn btn-danger">Read Governor</button>
+    </div>
+    <div class="dropdown dropup">
+      <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Governor
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button class="dropdown-item" id="gv1">performance</button>
+        <button class="dropdown-item" id="gv2">powersave</button>
+      </div>
+    </div>
+    <div class="">
+      <button class="btn btn-success">Set Governor</button>
+    </div>
+  </div>
+
+  
+
+
+</body>
+
+</html>
